@@ -10,6 +10,7 @@ from ecapture import ecapture as ec
 import wolframalpha
 import json
 import requests
+import random
 
 
 print('Loading your AI personal assistant - chitty')
@@ -98,6 +99,20 @@ if __name__=='__main__':
         elif 'open gmail' in statement:
             webbrowser.open_new_tab("gmail.com")
             speak("Google Mail open now")
+            time.sleep(5)
+        elif "Tell me motivation Quotes" in query or 'motivate me' in query:
+            stMsgs = ['Failure will never overtake me if my determination to succeed is strong enough',
+                      'The past cannot be changed. The future is yet in your power',
+                      'Only I can change my life. No one can do it for me',
+                      'Change your life today. Don\'t gamble on the future, act now, without delay',
+                      'Do the difficult things while they are easy and do the great things while they are small. A journey of a thousand miles must begin with a single step',
+                      'Either I will find a way, or I will make one',
+                      'Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time',
+                      'Good, better, best. Never let it rest. Till your good is better and your better is best']
+            highMsgs = ['Dont worry dude,every hard time comes to an end']
+            speak(random.choice(stMsgs))
+            speak('I think thins Motivated You sir ... if Not')
+            speak(random.choice(highMsgs))
             time.sleep(5)
 
         elif "weather" in statement:

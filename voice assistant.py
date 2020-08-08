@@ -100,8 +100,8 @@ if __name__=='__main__':
             webbrowser.open_new_tab("gmail.com")
             speak("Google Mail open now")
             time.sleep(5)
-        elif "Tell me motivation Quotes" in query or 'motivate me' in query:
-            stMsgs = ['Failure will never overtake me if my determination to succeed is strong enough',
+        elif "motivation Quotes" in statement or 'motivate me' in statement:
+            quotes = ['Failure will never overtake me if my determination to succeed is strong enough',
                       'The past cannot be changed. The future is yet in your power',
                       'Only I can change my life. No one can do it for me',
                       'Change your life today. Don\'t gamble on the future, act now, without delay',
@@ -110,7 +110,7 @@ if __name__=='__main__':
                       'Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time',
                       'Good, better, best. Never let it rest. Till your good is better and your better is best']
             highMsgs = ['Dont worry dude,every hard time comes to an end']
-            speak(random.choice(stMsgs))
+            speak(random.choice(quotes))
             speak('I think thins Motivated You sir ... if Not')
             speak(random.choice(highMsgs))
             time.sleep(5)
